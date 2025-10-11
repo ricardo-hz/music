@@ -1,17 +1,105 @@
-*{
-    box-sizing: border-box;
+body{
+    background-color: #A3485A
 }
 
-.album-container{
+/* Styling for the album grid container */
+.album-grid {
+    display: flex; /* Makes the albums sit side-by-side */
+    flex-wrap: wrap; /* Allows albums to wrap to the next line on smaller screens */
+    justify-content: center; /* Centers the albums horizontally */
+    gap: 30px; /* Adds space between albums (both horizontally and vertically) */
+    padding: 20px 0; /* Add some vertical padding around the grid */
+}
+
+/* Styling for individual album "cards" */
+.album {
+    /* flex-basis: 200px;  This sets a preferred width for each album. */
+    /* flex-grow: 1;      Allows albums to grow to fill available space. */
+    /* flex-shrink: 1;    Allows albums to shrink if needed. */
+    /* A shorthand for the above is 'flex: 1 1 200px;' */
+    
+    width: 200px; /* Define a fixed width for each album "card" */
+    text-align: center; /* Centers the text below the image */
+    background-color: #f9f9f9; /* Light background for the card */
+    border: 1px solid #eee; /* Subtle border */
+    border-radius: 8px; /* Slightly rounded corners */
+    padding: 15px; /* Padding inside the card */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.album:hover {
+    transform: translateY(-5px); /* Lift card slightly on hover */
+}
+
+/* Styling for the images within the album cards */
+.album img {
+    width: 100%; /* Make the image fill the width of its .album container */
+    height: 200px; /* Give the image a fixed height */
+    object-fit: cover; /* This is key! It ensures images fill the space without distortion, cropping if necessary */
+    border-radius: 4px; /* Slightly rounded image corners */
+    display: block; /* Removes any extra space below the image */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+/* General styling for the unordered lists within albums */
+.album ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.album li {
+    font-size: 0.9em; /* Smaller font for list items */
+    color: #555; /* Lighter text color */
+    margin-bottom: 5px; /* Space between list items */
+}
+
+/* Styling for the anchor tag around the image */
+.album a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent */
+    display: block; /* Make the link block-level to cover the image */
+}
+
+/* Styling for nav bar flex container */
+/* Color Palette: https://colorhunt.co/palette/662222842a3ba3485af5daa7 */
+.nav-bar{
+    height: 40px;
+    /* width: 100%; The bar is slightly too wide with this uncommented*/ 
+    background-color: #F5DAA7;
+    padding: 12px;
+    border-radius: 8px;
+    /* display: flex; Why does uncommenting this break things*/
+}
+
+.nav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-wrap: wrap; /* Allows cards to wrap to the next line */
 }
 
-.album img{
-    height: 200px;
-    width: 200px;
+/* Styling for list elements in nav bar */
+ .nav li{
+    margin: 4px;
+} 
+
+.nav li.spacer{
+    text-align: center;
+    flex: 1;
 }
 
-.album-container div{
-    background: lightgrey;
+/* Changes link colors and decoration */
+.nav li a{
+    display: block;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.nav li:hover a{
+    background-color: #662222;
+    border-radius: 8px;
+    color: white;
 }

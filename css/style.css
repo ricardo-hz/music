@@ -57,3 +57,51 @@
     color: inherit; /* Inherit color from parent */
     display: block; /* Make the link block-level to cover the image */
 }
+
+/* Styling for nav bar flex container */
+.nav-bar{
+    height: 40px;
+    /* width: 100%; The bar is slightly too wide with this uncommented*/ 
+    background-color: aqua;
+    padding: 12px;
+    border: 4px solid blue;
+    /* display: flex; Why does uncommenting this break things*/
+}
+
+.nav{
+    background-color: peachpuff;
+    border: 4px salmon;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Styling for list elements in nav bar */
+ .nav li{
+    background-color: red;
+    margin: 4px;
+    
+    
+} 
+
+.nav li.spacer{
+    flex: 2;
+}
+
+/* Changes link colors and decoration */
+.nav li a{
+    display: block;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.nav li:hover{
+    background-color: black;
+    color: white;
+}
+
+.nav li:hover a{
+    color: white;
+}

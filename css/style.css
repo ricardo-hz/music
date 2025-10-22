@@ -1,5 +1,5 @@
 body{
-    background-color: #A3485A
+    /* background-color: #A3485A */
 }
 
 /* Styling for the album grid container */
@@ -20,7 +20,7 @@ body{
     
     width: 200px; /* Define a fixed width for each album "card" */
     text-align: center; /* Centers the text below the image */
-    background-color: #f9f9f9; /* Light background for the card */
+    background-color: #e0e0e0; /* Light background for the card */
     border: 1px solid #eee; /* Subtle border */
     border-radius: 8px; /* Slightly rounded corners */
     padding: 15px; /* Padding inside the card */
